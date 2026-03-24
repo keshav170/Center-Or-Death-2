@@ -1,6 +1,6 @@
 class JoyStick {
     constructor(position, radius) {
-        this.sensitivity = 1;
+        this.sensitivity = 0.5;
         this.radius = radius;
         this.position = position;
 
