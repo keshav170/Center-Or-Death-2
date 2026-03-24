@@ -205,7 +205,7 @@ function constraint_enemy(sound = true) {
     if (enemy.position.y < enemy.radius + SPIKE_AMP) {
         isGameOver = true;
         if (sound) SOUND_POOL.playBgm("wall_collide", 0.6, false);
-        enemy.velocity.y *= -1;
+        enemy.velocity.y *= -5;
         enemy.position.y = enemy.radius + SPIKE_AMP;
         particleSystem.spawnAt(
             new Vec2(enemy.position.x, enemy.position.y - enemy.radius)
@@ -326,7 +326,7 @@ let spike_t = 0;
 
 function draw_spike_boundary() {
     let spike_sin = Math.sin(spike_t);
-    spike_t += 0.01;
+    spike_t += 0.00;
     let gap = SPIKE_AMP / 4;
     let halfGap = ((gap * 3) / 2) * spike_sin;
     ctx.fillStyle = "RED";
